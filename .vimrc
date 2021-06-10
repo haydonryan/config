@@ -42,6 +42,25 @@ set background=dark
 " noremap <Leader>Y "+y
 " noremap <Leader>P "+p
 
+" Move between splits with control and vim arrows
+" From: https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L> 
+nnoremap <C-H> <C-W><C-H>
+" control W R, swap planes 
+" "Max out the height of the current split
+"ctrl + w _
+
+"Max out the width of the current split
+"ctrl + w |
+
+"Normalize all split sizes, which is very handy when resizing terminal
+" ctrl + w =
+" more natural split opening
+set splitbelow
+set splitright
+
 " use system clipboard
 " https://anuragpeshne.github.io/essays/vim/7.html
 "noremap y "*y
