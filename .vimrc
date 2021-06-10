@@ -2,6 +2,14 @@ call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 call plug#end()
 
+"Make vim clipboard the same as ubuntu's ( note this requires +clipboard to
+"show when you type vim --version
+set clipboard=unnamedplus
+
+
+"Make search case insensitive
+set ignorecase
+
 "Set hybrid line numbering
 set number relativenumber
 set nu rnu
