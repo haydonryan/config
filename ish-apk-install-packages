@@ -1,0 +1,3 @@
+#!/bin/bash
+
+apk add git alpine-sdk curl vim go tmux ssh openssh nmap google-test cmake
