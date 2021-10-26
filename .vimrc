@@ -13,7 +13,7 @@ call plug#end()
 
 "Make vim clipboard the same as ubuntu's ( note this requires +clipboard to
 "show when you type vim --version
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 
 "Make search case insensitive
