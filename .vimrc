@@ -1,10 +1,19 @@
+" Automatically install vimplug if it isn't already
+" ------------------------------------------------
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
+" ------------------------------------------------
+
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 call plug#end()
 
 "Make vim clipboard the same as ubuntu's ( note this requires +clipboard to
 "show when you type vim --version
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 
 "Make search case insensitive
