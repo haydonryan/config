@@ -55,7 +55,8 @@ Thunderbird
 code
 ### Berkley Boinc
 boinc
-
+### Autokey
+Get from AUR https://aur.archlinux.org/packages/autokey-gtk/
 ## Wifi
 I had to install broadcom-wl on the macbook to enable the wifi. 
 
