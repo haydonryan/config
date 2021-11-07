@@ -51,6 +51,8 @@ festival
 gimp inkscape krita
 Thunderbird
 
+### Fast terminal
+Alacritty
 ### VSCode
 code
 ### Berkley Boinc
