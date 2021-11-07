@@ -23,6 +23,8 @@ set ignorecase
 set number relativenumber
 set nu rnu
 
+"Set fileformat=unix
+
 syntax on
 set tabstop=2
 set shiftwidth=2
