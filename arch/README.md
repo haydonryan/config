@@ -37,7 +37,7 @@ dosfstools sudo git filesystem broadcom-wl base-devel
 gdm gnome
 
 firefox smartmontools gtest ipmitool
-docker tmux nmap go delve golang-golang-x-tools  gnome-tweaks arduino arduino-cli bat openconnect cmake
+docker tmux nmap go delve golang-golang-x-tools  gnome-tweaks arduino arduino-cli bat openconnect cmake kicad
 
 gnome-epub-thumbnailer
 
