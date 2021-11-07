@@ -33,10 +33,10 @@
 ## Packages
 pacstrap /mnt base linux linux-firmware vim grub efibootmgr 
 
-dosfstools sudo git filesystem 
+dosfstools sudo git filesystem broadcom-wl base-devel
 gdm gnome
 
-base-devel firefox smartmontools gtest ipmitool
+firefox smartmontools gtest ipmitool
 docker tmux nmap git-perl go delve golang-golang-x-tools  gnome-tweaks arduino arduino-cli bat openconnect cmake
 
 gnome-epub-thumbnailer
