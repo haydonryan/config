@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Haydon Ryan
+	email = haydon.ryan@gmail.com
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
