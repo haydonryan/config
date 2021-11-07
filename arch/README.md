@@ -36,8 +36,8 @@ pacstrap /mnt base linux linux-firmware vim grub efibootmgr
 dosfstools sudo git filesystem 
 gdm gnome
 
-base-develop firefox smartmontools gtest ipmitool
-docker curl tmux openssh nmap git-perl go delve golang-golang-x-tools  gnome-tweaks arduino arduino-cli bat openconnect
+base-devel firefox smartmontools gtest ipmitool
+docker tmux nmap git-perl go delve golang-golang-x-tools  gnome-tweaks arduino arduino-cli bat openconnect cmake
 
 gnome-epub-thumbnailer
 
