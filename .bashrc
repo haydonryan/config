@@ -109,3 +109,9 @@ alias ls='ls --color=auto'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+
+# ------------------------------------------------------------
+# Set caps lock to be control key, since Caps Lock is USELESS
+# ------------------------------------------------------------
+setxkbmap -option ctrl:nocaps
