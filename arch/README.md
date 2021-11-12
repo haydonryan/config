@@ -33,7 +33,7 @@
 ## Packages
 ```
 # Bootstrap arch.
-pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git filesystem broadcom-wl base-devel
+pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git filesystem  base-devel
 
 # Install base packages pacman -S 
 pacman -S gdm gnome
@@ -68,13 +68,21 @@ pacman -S Alacritty
 pacman -S code
 ```
 ### Berkley Boinc
+```
 pacman -S boinc
+```
 ### Autokey
 Get from AUR https://aur.archlinux.org/packages/autokey-gtk/
 ## Wifi
 I had to install broadcom-wl on the macbook to enable the wifi. 
+```
+# Driver for wifi on Macbook pro
+pacman -S broadcom-wl
+```
 
 
 ## Removal of additional packages.
 removed epiphany:
-```pacman -R epiphany```
+```
+pacman -R epiphany
+```
