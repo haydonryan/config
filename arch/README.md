@@ -31,32 +31,44 @@
 
 
 ## Packages
-pacstrap /mnt base linux linux-firmware vim grub efibootmgr 
+```
+# Bootstrap arch.
+pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git filesystem broadcom-wl base-devel
 
-dosfstools sudo git filesystem broadcom-wl base-devel
-gdm gnome
+# Install base packages pacman -S 
+pacman -S gdm gnome
 
-firefox smartmontools gtest ipmitool
-docker tmux nmap go delve golang-golang-x-tools  gnome-tweaks arduino arduino-cli bat openconnect cmake kicad
+# Post GUI packages
+pacman -S firefox smartmontools gtest ipmitool vlc gnome-epub-thumbnailer tmux nmap go delve golang-golang-x-tools  
+pacman -S gnome-tweaks arduino arduino-cli bat openconnect cmake kicad
+pacman -S docker
 
-gnome-epub-thumbnailer
+```
 
 ### Autokey
 
 ### Text to speech
-espeak-ng
-festival
+```
+pacman -S espeak-ng
+pacman -S festival
+```
 
-### General Gnome Apps
-gimp inkscape krita
-Thunderbird
+### Additional Gnome Apps
+```
+pacman -S gimp inkscape krita Thunderbird
+```
 
 ### Fast terminal
-Alacritty
+```
+pacman -S Alacritty
+```
+
 ### VSCode
-code
+```
+pacman -S code
+```
 ### Berkley Boinc
-boinc
+pacman -S boinc
 ### Autokey
 Get from AUR https://aur.archlinux.org/packages/autokey-gtk/
 ## Wifi
