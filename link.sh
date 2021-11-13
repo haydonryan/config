@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ln -s ~/.haydons-config/.vimrc ~/.vimrc
 ln -s ~/.haydons-config/.tmux.conf ~/.tmux.conf
