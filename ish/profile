@@ -10,3 +10,5 @@ for script in /etc/profile.d/*.sh ; do
 done
 alias l="ls -l"
 alias c="git commit -m"
+
+. ~/.bashrc
