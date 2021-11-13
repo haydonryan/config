@@ -3,12 +3,13 @@
 #################################################
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+if [ "$SHELL" != "/bin/ash" ]; then
+  [[ $- != *i* ]] && return
+fi
 
 # -------------
 # setup History
 # -------------
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -17,7 +18,10 @@ HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+
+if [ "$SHELL" != "/bin/ash" ]; then
+  shopt -s checkwinsize
+fi
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -75,11 +79,14 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+
+if [ "$SHELL" != "/bin/ash" ]; then
+  if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+      . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+      . /etc/bash_completion
+    fi
   fi
 fi
 
@@ -114,4 +121,6 @@ fi
 # ------------------------------------------------------------
 # Set caps lock to be control key, since Caps Lock is USELESS
 # ------------------------------------------------------------
-setxkbmap -option ctrl:nocaps
+if [ "$SHELL" != "/bin/ash" ]; then
+  setxkbmap -option ctrl:nocaps
+fi
