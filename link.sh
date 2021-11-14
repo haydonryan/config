@@ -15,3 +15,9 @@ echo "linking .gitconfig"
 ln -s ~/.haydons-config/.gitconfig ~/.gitconfig
 echo "linking .bashrc"
 ln -s ~/.haydons-config/.bashrc ~/.bashrc
+
+if [ $SHELL == "/bin/ash" ]; then
+  echo "linking ash profile script"
+  # must be a hard link
+  ln ~/.haydons-config/ish/profile /etc/profile
+fi
