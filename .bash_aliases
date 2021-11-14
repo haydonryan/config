@@ -4,4 +4,4 @@ alias ll='ls -alF'
 alias c='git commit -m'
 alias s='git status'
 alias a='git add -p'
-
+alias p='git push'
