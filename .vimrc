@@ -31,6 +31,10 @@ set shiftwidth=2
 set expandtab
 set ai
 
+" Disable EX and command mode (I never use it)
+nnoremap Q <Nop>
+nnoremap q: <nop>
+
 " highlight all search
 set hlsearch
 
