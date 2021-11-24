@@ -15,6 +15,11 @@ call plug#end()
 "show when you type vim --version
 "set clipboard=unnamedplus
 
+" Underline the current line with either dashes or equals. Underlines up to
+" the length.
+nnoremap <F4> yyp<c-v>$r-
+nnoremap <F5> yyp<c-v>$r=
+
 
 "Make search case insensitive
 set ignorecase
