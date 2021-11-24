@@ -37,13 +37,24 @@ set ignorecase
 "Set hybrid line numbering
 set number relativenumber
 
+" Set no bells
+set noerrorbells
 "Set fileformat=unix
+
+" Turn off swap files and put undo files in .vim directory
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
 
 syntax on
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set ai
+
+" Set a bar to indicate how wide code is
+"set colorcolumn=80
 
 " Disable EX and command mode (I never use it)
 nnoremap Q <Nop>
