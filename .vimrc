@@ -36,7 +36,6 @@ set ignorecase
 
 "Set hybrid line numbering
 set number relativenumber
-set nu rnu
 
 "Set fileformat=unix
 
