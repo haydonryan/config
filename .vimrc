@@ -18,6 +18,10 @@ call plug#end()
 " Set Y to copy to end of line (be like A, D, C)
 nnoremap Y y$
 
+" Make vim work in the same was as tmux for moving windows it's the opposite
+" corner on my moonlander keyboard
+nnoremap \ <c-w>
+
 " Keep searching centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
