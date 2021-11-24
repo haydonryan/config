@@ -21,6 +21,17 @@ nnoremap <F4> yyp<c-v>$r-
 nnoremap <F5> yyp<c-v>$r=
 
 
+" Automatically turn on set paste mode copying and pasting from terminal
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
 "Make search case insensitive
 set ignorecase
 
