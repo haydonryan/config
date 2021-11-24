@@ -15,11 +15,6 @@ call plug#end()
 "show when you type vim --version
 "set clipboard=unnamedplus
 
-" Underline the current line with either dashes or equals. Underlines up to
-" the length.
-nnoremap <F4> yyp<c-v>$r-
-nnoremap <F5> yyp<c-v>$r=
-
 " Automatically turn on set paste mode copying and pasting from terminal
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
@@ -113,3 +108,14 @@ set splitright
 "noremap x "*x
 "noremap dd "*dd
 "noremap D "*D
+
+" In visual mode capital J and K move the selection up and down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+"Allow commands to be run by typing <space><char>
+let mapleader = " "
+
+" Underline the current line with either dashes or equals. Underlines up to
+" the length.
+nnoremap <leader>- yyp<c-v>$r-
+nnoremap <leader>= yyp<c-v>$r=
