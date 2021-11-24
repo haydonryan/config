@@ -15,6 +15,26 @@ call plug#end()
 "show when you type vim --version
 "set clipboard=unnamedplus
 
+" Set Y to copy to end of line (be like A, D, C)
+nnoremap Y y$
+
+" Keep searching centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Make undo points on common programming characters
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" Put any big jumps into jump list
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
+
+
 " Automatically turn on set paste mode copying and pasting from terminal
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
@@ -109,11 +129,17 @@ set splitright
 "noremap dd "*dd
 "noremap D "*D
 
-" In visual mode capital J and K move the selection up and down
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 "Allow commands to be run by typing <space><char>
 let mapleader = " "
+
+" Capital J and K move the selection up and down, control j and k in insert
+" move the line and leader j,k in normal mode
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <c-j> <esc>:m .+1<CR>==
+inoremap <c-k> <esc>:m .-2<CR>==
+nnoremap <leader>j <esc>:m .+1<CR>==
+nnoremap <leader>k <esc>:m .-2<CR>==
 
 " Underline the current line with either dashes or equals. Underlines up to
 " the length.
