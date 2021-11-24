@@ -20,7 +20,6 @@ call plug#end()
 nnoremap <F4> yyp<c-v>$r-
 nnoremap <F5> yyp<c-v>$r=
 
-
 " Automatically turn on set paste mode copying and pasting from terminal
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
@@ -51,8 +50,12 @@ set ai
 nnoremap Q <Nop>
 nnoremap q: <nop>
 
-" highlight all search
-set hlsearch
+" Hghlight words that are being searched for in real time as you type
+set incsearch
+" Don't hightlight everything else - just the next thing
+" set nohlsearch
+" Toggle on highlight everything with <C-A>.
+noremap <c-a> :set hlsearch!<cr>
 
 set ruler
 
