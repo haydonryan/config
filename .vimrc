@@ -133,6 +133,50 @@ set splitright
 "noremap dd "*dd
 "noremap D "*D
 
+" Show statusbar
+" Possibly for future will use https://github.com/tomasiser/vim-code-dark
+set laststatus=2
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+" Setup statusbar colors
+hi StatusBarGitBranch guifg=White guibg=DarkSlateGray ctermbg=17 ctermfg=White
+"hi StatusBarFileName guifg=Black guibg=Green ctermbg=46 ctermfg=0
+"hi StatusBarFileStatus guifg=Black guibg=Green ctermbg=46 ctermfg=0
+hi StatusBarPosition guifg=Black guibg=Green ctermbg=17 ctermfg=White
+
+set statusline=
+set statusline+=%#StatusBarGitBranch#
+set statusline+=\ 
+set statusline+=%{StatuslineGit()}
+set statusline+=\ 
+set statusline+=\ 
+"Filename
+set statusline+=%#LineNr#
+set statusline+=\ %f
+set statusline+=%m
+set statusline+=%=
+
+au InsertLeave,InsertEnter,BufWritePost   * call ModifiedColor()
+" default the statusline when entering Vim
+hi statusline guibg=White ctermfg=8 guifg=DarkSlateGray ctermbg=15
+
+set statusline+=[%{getbufvar(bufnr('%'),'&mod')?'modified':'saved'}]      
+set statusline+=\ 
+"set statusline+=%#CursorColumn#
+set statusline+=%#PmenuSel#
+set statusline+=%#StatusBarPosition#
+set statusline+=%r      "read only flag
+set statusline+=\ Col:%c                    " current column
+set statusline+=\ Buf:%n\                    " Buffer number
+set statusline+=Line:%l/%L[%p%%]            " line X of Y [percent of file]
+
 "Allow commands to be run by typing <space><char>
 let mapleader = " "
 
