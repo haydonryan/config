@@ -166,10 +166,6 @@ set statusline+=\ %f
 set statusline+=%m
 set statusline+=%=
 
-au InsertLeave,InsertEnter,BufWritePost   * call ModifiedColor()
-" default the statusline when entering Vim
-hi statusline guibg=White ctermfg=8 guifg=DarkSlateGray ctermbg=15
-
 set statusline+=[%{getbufvar(bufnr('%'),'&mod')?'modified':'saved'}]      
 set statusline+=\ 
 "set statusline+=%#CursorColumn#
