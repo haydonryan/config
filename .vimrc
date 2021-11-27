@@ -192,3 +192,4 @@ nnoremap <leader>k <esc>:m .-2<CR>==
 " the length.
 nnoremap <leader>- yyp<c-v>$r-
 nnoremap <leader>= yyp<c-v>$r=
+nnoremap <leader>n :set list!<CR>
