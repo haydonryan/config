@@ -18,6 +18,9 @@ call plug#end()
 " Set Y to copy to end of line (be like A, D, C)
 nnoremap Y y$
 
+" Override non printable characters for set list
+set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
 " Make vim work in the same was as tmux for moving windows it's the opposite
 " corner on my moonlander keyboard
 nnoremap \ <c-w>
