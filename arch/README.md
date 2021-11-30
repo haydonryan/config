@@ -33,7 +33,7 @@
 ## Packages
 ```
 # Bootstrap arch.
-pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git filesystem  base-devel
+pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git filesystem base-devel clang
 
 # Install base packages pacman -S 
 pacman -S gdm gnome

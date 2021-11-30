@@ -77,6 +77,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# --------------------------------------
+# Add go bin path to path and set GOPATH
+# --------------------------------------
+export PATH=$PATH:~/workspace/go/bin
+export GOPATH=~/workspace/go
 
 # ------------------------------------------------------------
 # Set caps lock to be control key, since Caps Lock is USELESS
