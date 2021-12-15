@@ -118,9 +118,9 @@ set background=dark
 " From: https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L> 
+nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" control W R, swap planes 
+" control W R, swap planes
 " "Max out the height of the current split
 "ctrl + w _
 
@@ -160,22 +160,17 @@ hi StatusBarGitBranch guifg=White guibg=DarkSlateGray ctermbg=17 ctermfg=White
 "hi StatusBarFileStatus guifg=Black guibg=Green ctermbg=46 ctermfg=0
 hi StatusBarPosition guifg=Black guibg=Green ctermbg=17 ctermfg=White
 
-set statusline=
-set statusline+=%#StatusBarGitBranch#
-set statusline+=\ 
-set statusline+=%{StatuslineGit()}
-set statusline+=\ 
-set statusline+=\ 
+set statusline=%#StatusBarGitBranch#
+set statusline+=\ %{StatuslineGit()}
 "Filename
-set statusline+=%#LineNr#
+set statusline+=\ \ %#LineNr#
 set statusline+=\ %f
 set statusline+=%m
 set statusline+=%=
 
-set statusline+=[%{getbufvar(bufnr('%'),'&mod')?'modified':'saved'}]      
-set statusline+=\ 
+set statusline+=[%{getbufvar(bufnr('%'),'&mod')?'modified':'saved'}]
 "set statusline+=%#CursorColumn#
-set statusline+=%#PmenuSel#
+set statusline+=\ %#PmenuSel#
 set statusline+=%#StatusBarPosition#
 set statusline+=%r      "read only flag
 set statusline+=\ Col:%c                    " current column
@@ -203,11 +198,11 @@ nnoremap <leader>- yyp<c-v>$r-
 nnoremap <leader>= yyp<c-v>$r=
 nnoremap <leader>n :set list!<CR>
 
-" automatically create .sh shebang and set +x 
+" automatically create .sh shebang and set +x
 " Added from
 " https://github.com/LinuxSDA/HashBang/blob/master/Hashbang
 function! Hashbang(portable, permission, RemExt)
-let shells = { 
+let shells = {
         \    'awk': "awk",
         \     'sh': "bash",
         \     'hs': "runhaskell",
@@ -216,7 +211,7 @@ let shells = {
         \    'mak': "make",
         \     'js': "node",
         \      'm': "octave",
-        \     'pl': "perl", 
+        \     'pl': "perl",
         \    'php': "php",
         \     'py': "python",
         \      'r': "Rscript",
@@ -232,8 +227,8 @@ if has_key(shells,extension)
 	let fileshell = shells[extension]
 
 	if a:portable
-		let line =  "#! /usr/bin/env " . fileshell 
-	else 
+		let line =  "#! /usr/bin/env " . fileshell
+	else
 		let line = "#! " . system("which " . fileshell)
 	endif
 
