@@ -206,6 +206,7 @@ nnoremap <leader>n :set list!<CR>
 " automatically create .sh shebang and set +x
 " Added from
 " https://github.com/LinuxSDA/HashBang/blob/master/Hashbang
+" ==========================================================================
 function! Hashbang(portable, permission, RemExt)
 let shells = {
         \    'awk': "awk",
@@ -253,3 +254,4 @@ endif
 endfunction
 
 :autocmd BufNewFile *.* :call Hashbang(1,1,0)
+" ==========================================================================
