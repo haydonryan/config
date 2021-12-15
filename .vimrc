@@ -188,6 +188,9 @@ inoremap <c-k> <esc>:m .-2<CR>==
 nnoremap <leader>j <esc>:m .+1<CR>==
 nnoremap <leader>k <esc>:m .-2<CR>==
 
+" Convert snake_case to camelCase
+nnoremap <leader>c :%s/_\(\w\)/\U\1
+
 " Underline the current line with either dashes or equals. Underlines up to
 " the length.
 nnoremap <leader>- yyp<c-v>$r-
