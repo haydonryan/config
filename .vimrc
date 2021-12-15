@@ -141,6 +141,12 @@ set splitright
 "noremap dd "*dd
 "noremap D "*D
 
+" Map control y and control P to yank and paste to clipboard
+nnoremap <C-y> "+y
+vnoremap <C-y> "+y
+nnoremap <C-p> "+gP
+vnoremap <C-p> "+gP
+
 " Show statusbar
 " Possibly for future will use https://github.com/tomasiser/vim-code-dark
 set laststatus=2
