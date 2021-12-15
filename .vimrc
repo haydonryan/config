@@ -9,7 +9,13 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'https://github.com/ntpeters/vim-better-whitespace'
 call plug#end()
+
+
+"Strip whitespace errors on save
+" autocmd FileType md,go,txt,sh EnableStripWhitespaceOnSave
+let g:strip_whitespace_on_save = 1
 
 "Make vim clipboard the same as ubuntu's ( note this requires +clipboard to
 "show when you type vim --version
