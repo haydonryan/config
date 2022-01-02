@@ -79,6 +79,11 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set ai
+set smartindent
+
+set scrolloff=2
+" Add extra column to left to show linting or git integration
+set signcolumn=yes
 
 " Set a bar to indicate how wide code is
 "set colorcolumn=80
