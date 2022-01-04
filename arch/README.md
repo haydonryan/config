@@ -39,7 +39,7 @@ pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git 
 pacman -S gdm gnome
 
 # Post GUI packages
-pacman -S firefox smartmontools gtest ipmitool vlc gnome-epub-thumbnailer tmux nmap go delve golang-golang-x-tools  
+pacman -S firefox smartmontools gtest ipmitool vlc gnome-epub-thumbnailer tmux nmap go delve golang-golang-x-tools fzf the_silver_searcher ripgrep
 pacman -S gnome-tweaks arduino arduino-cli bat openconnect cmake kicad
 pacman -S docker
 
