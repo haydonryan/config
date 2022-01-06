@@ -12,9 +12,15 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
 call plug#end()
 
+"Enable whitespace highlighting
+" :EnableWhitespace
 "Strip whitespace errors on save
-" autocmd FileType md,go,txt,sh EnableStripWhitespaceOnSave
-let g:strip_whitespace_on_save = 1
+autocmd FileType md,go,txt,sh EnableStripWhitespaceOnSave
+let g:better_whitespace_enabled=1
+" enable for all file types except the blacklist
+let g:strip_whitespace_on_save=1
+"Need to expressly remove markdown from the filelist to get md files to work
+let g:better_whitespace_filetypes_blacklist=['diff', 'git', 'gitcommit', 'unite', 'qf', 'help', 'fugitive']
 
 "Make vim clipboard the same as ubuntu's ( note this requires +clipboard to
 "show when you type vim --version
