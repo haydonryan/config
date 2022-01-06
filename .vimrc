@@ -10,6 +10,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
+Plug 'kamykn/spelunker.vim'
 call plug#end()
 
 "Enable whitespace highlighting
