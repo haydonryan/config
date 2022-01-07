@@ -13,6 +13,12 @@ Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'kamykn/spelunker.vim'
 call plug#end()
 
+" Spelling options
+"----------------
+let g:spelunker_disable_uri_checking = 1
+
+" Whitespace highlighting
+"------------------------
 "Enable whitespace highlighting
 " :EnableWhitespace
 "Strip whitespace errors on save
