@@ -6,3 +6,4 @@ alias s='echo "git status"; git status'
 alias a='echo "git add -p"; git add -p'
 alias p='echo "git push"; git push'
 alias update='sudo pacman -Syu --noconfirm'
+alias vim=nvim
