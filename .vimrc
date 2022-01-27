@@ -11,6 +11,7 @@ call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'kamykn/spelunker.vim'
+Plug 'github/copilot.vim'
 call plug#end()
 
 " Spelling options
