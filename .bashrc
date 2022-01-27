@@ -64,7 +64,7 @@ parse_git_branch() {
 }
 
 export PS1='[\[\033[01;32m\]\u\[\033[37m\]@\[\033[01;32m\]\h:\[\033[01;34m\]\w\[\033[00m\]] $(parse_git_branch)\n\$ '
-export EDITOR=vim
+export EDITOR=nvim
 
 # -----------------------------------
 # Include included and custom aliases
