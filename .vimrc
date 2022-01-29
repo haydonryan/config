@@ -42,15 +42,6 @@ let g:strip_whitespace_on_save=1
 "Need to expressly remove markdown from the filelist to get md files to work
 let g:better_whitespace_filetypes_blacklist=['diff', 'git', 'gitcommit', 'unite', 'qf', 'help', 'fugitive']
 
-" ===========
-" Telescope
-" ===========
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
 " ========================
 " General Vim settings
 " ========================
@@ -249,6 +240,15 @@ nnoremap <leader>c :%s/_\(\w\)/\U\1
 nnoremap <leader>- yyp<c-v>$r-
 nnoremap <leader>= yyp<c-v>$r=
 nnoremap <leader>n :set list!<CR>
+
+" ===========
+" Telescope
+" ===========
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " automatically create .sh shebang and set +x
 " Added from
