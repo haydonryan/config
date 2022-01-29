@@ -12,6 +12,8 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'kamykn/spelunker.vim'
 Plug 'github/copilot.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 " Spelling options
@@ -33,6 +35,17 @@ let g:better_whitespace_filetypes_blacklist=['diff', 'git', 'gitcommit', 'unite'
 "Make vim clipboard the same as ubuntu's ( note this requires +clipboard to
 "show when you type vim --version
 "set clipboard=unnamedplus
+
+" ===========
+" Telescope
+" ===========
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+
 
 " Set Y to copy to end of line (be like A, D, C)
 nnoremap Y y$
