@@ -1,12 +1,19 @@
+" ===================================================
 " Automatically install vimplug if it isn't already
-" ------------------------------------------------
+" ===================================================
+
+" =======
+" VimPlug
+" =======
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     endif
-" ------------------------------------------------
 
+" ===========
+" Add Plugins
+" ===========
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
@@ -16,25 +23,24 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
+" ================
 " Spelling options
-"----------------
+" ================
 let g:spelunker_disable_uri_checking = 1
 
+" ========================
 " Whitespace highlighting
-"------------------------
-"Enable whitespace highlighting
+" ========================
+
+" Enable whitespace highlighting
 " :EnableWhitespace
-"Strip whitespace errors on save
+" Strip whitespace errors on save
 autocmd FileType md,go,txt,sh EnableStripWhitespaceOnSave
 let g:better_whitespace_enabled=1
 " enable for all file types except the blacklist
 let g:strip_whitespace_on_save=1
 "Need to expressly remove markdown from the filelist to get md files to work
 let g:better_whitespace_filetypes_blacklist=['diff', 'git', 'gitcommit', 'unite', 'qf', 'help', 'fugitive']
-
-"Make vim clipboard the same as ubuntu's ( note this requires +clipboard to
-"show when you type vim --version
-"set clipboard=unnamedplus
 
 " ===========
 " Telescope
@@ -45,10 +51,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-
-
-" Set Y to copy to end of line (be like A, D, C)
-nnoremap Y y$
+" ========================
+" General Vim settings
+" ========================
 
 " Override non printable characters for set list
 set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
@@ -71,8 +76,6 @@ inoremap ? ?<c-g>u
 " Put any big jumps into jump list
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
-
-
 
 " Automatically turn on set paste mode copying and pasting from terminal
 let &t_SI .= "\<Esc>[?2004h"
@@ -164,6 +167,13 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+"Make vim clipboard the same as ubuntu's ( note this requires +clipboard to
+"show when you type vim --version
+"set clipboard=unnamedplus
+
+" Set Y to copy to end of line (be like A, D, C)
+nnoremap Y y$
+
 " use system clipboard
 " https://anuragpeshne.github.io/essays/vim/7.html
 "noremap y "*y
@@ -178,6 +188,10 @@ nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
+
+" ===========
+" Status Bar
+" ===========
 
 " Show statusbar
 " Possibly for future will use https://github.com/tomasiser/vim-code-dark
@@ -287,4 +301,3 @@ endif
 endfunction
 
 :autocmd BufNewFile *.* :call Hashbang(1,1,0)
-" ==========================================================================
