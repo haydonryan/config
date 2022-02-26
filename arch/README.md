@@ -52,6 +52,8 @@ pacman -S docker
 pacman -S espeak-ng
 pacman -S festival
 ```
+### VPN
+Had to disabe EAP for one of the vpns I connect to (in PPP settings).
 
 ### Additional Gnome Apps
 ```
