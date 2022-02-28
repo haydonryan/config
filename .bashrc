@@ -81,8 +81,9 @@ fi
 # --------------------------------------
 # Add go bin path to path and set GOPATH
 # --------------------------------------
-export PATH=$PATH:~/workspace/go/bin
 export GOPATH=~/workspace/go
+export GOBIN=~/workspace/go/bin
+export PATH=$GOBIN:$PATH
 
 # ------------------------------------------------------------
 # Set caps lock to be control key, since Caps Lock is USELESS
