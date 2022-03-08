@@ -91,4 +91,7 @@ export PATH=$GOBIN:$PATH
 if [ "$SHELL" != "/bin/ash" ]; then
   setxkbmap -option ctrl:nocaps
 fi
+# ----------------------
+# Setup Rust Environment
+# ----------------------
 . "$HOME/.cargo/env"
