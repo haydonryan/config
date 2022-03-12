@@ -21,8 +21,14 @@ Plug 'kamykn/spelunker.vim'
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
+
+" ============
+" Rust options
+" ============
+let g:rustfmt_autosave = 1
 " ================
 " Spelling options
 " ================
