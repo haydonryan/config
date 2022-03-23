@@ -85,6 +85,9 @@ I had to install broadcom-wl on the macbook to enable the wifi.
 pacman -S broadcom-wl
 ```
 
+### Turn Off SPDIF
+Go into speaker control in gnome, switch to spdif device and drag volume until it mutes, change back to built in speakers and it will turn off.
+
 
 ## Removal of additional packages.
 removed epiphany:
