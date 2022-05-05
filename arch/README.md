@@ -33,14 +33,14 @@
 ## Packages
 ```
 # Bootstrap arch.
-pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git filesystem base-devel clang
+pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git filesystem base-devel clang networkmanager
 
 # Install base packages pacman -S 
 pacman -S gdm gnome
 
 # Post GUI packages
 pacman -S firefox smartmontools gtest ipmitool vlc gnome-epub-thumbnailer tmux nmap rust go delve golang-golang-x-tools fzf the_silver_searcher ripgrep openvpn
-pacman -S gnome-tweaks arduino arduino-cli bat openconnect cmake kicad jq exfat-fuse exfatprogs
+pacman -S gnome-tweaks arduino arduino-cli bat openconnect cmake kicad jq exfatprogs
 
 
 pacman -S python3 python-setuptools
