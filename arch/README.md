@@ -48,6 +48,9 @@ pacman -S docker
 
 ```
 
+### Postinstall
+In tweaks - additional layout options - ctrl position.
+
 ### Autokey
 
 ### Text to speech
