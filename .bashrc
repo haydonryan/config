@@ -85,12 +85,6 @@ export GOPATH=~/workspace/go
 export GOBIN=~/workspace/go/bin
 export PATH=$GOBIN:$PATH
 
-# ------------------------------------------------------------
-# Set caps lock to be control key, since Caps Lock is USELESS
-# ------------------------------------------------------------
-if [ "$SHELL" != "/bin/ash" ]; then
-  setxkbmap -option ctrl:nocaps
-fi
 # ----------------------
 # Setup Rust Environment
 # ----------------------
