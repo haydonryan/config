@@ -50,6 +50,7 @@ pacman -S docker
 
 ### Postinstall
 In tweaks - additional layout options - ctrl position.
+https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/
 
 ### Autokey
 
