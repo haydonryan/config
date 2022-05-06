@@ -47,6 +47,14 @@ pacman -S python3 python-setuptools
 pacman -S docker
 
 ```
+## Lenovo X1 Packages
+Great reference: https://www.reddit.com/r/thinkpad/comments/oelz0t/my_experience_setting_up_and_running_arch_linux/
+
+
+```
+# Sound Firmware
+pacman -S sof-firmware  
+```
 
 ### Postinstall
 In tweaks - additional layout options - ctrl position.
