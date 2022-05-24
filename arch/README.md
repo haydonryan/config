@@ -33,7 +33,7 @@
 ## Packages
 ```
 # Bootstrap arch.
-pacstrap /mnt base linux linux-firmware vim grub efibootmgr dosfstools sudo git filesystem base-devel clang networkmanager
+pacstrap /mnt base linux linux-firmware linux-headers nvim grub efibootmgr dosfstools sudo git filesystem base-devel clang networkmanager
 
 # Install base packages pacman -S 
 pacman -S gdm gnome
@@ -52,8 +52,8 @@ Great reference: https://www.reddit.com/r/thinkpad/comments/oelz0t/my_experience
 
 
 ```
-# Sound Firmware
-pacman -S sof-firmware  
+# Sound Firmware, intel specific
+pacman -S sof-firmware intel-ucode intel-media-driver acpi
 ```
 
 ### Postinstall
