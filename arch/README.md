@@ -68,7 +68,10 @@ pacman -S espeak-ng
 pacman -S festival
 ```
 ### VPN
-Had to disabe EAP for one of the vpns I connect to (in PPP settings).
+```
+pacman -S networkmanager-l2tp strongswan
+```
+# Had to disabe EAP for one of the vpns I connect to (in PPP settings). Copy connection from /etc/NetworkManager/system-connections
 
 ### Additional Gnome Apps
 ```
