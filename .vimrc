@@ -112,11 +112,22 @@ local opts = {
 require('rust-tools').setup(opts)
 EOF
 
+" -- Set configuration for specific filetype.
+"  cmp.setup.filetype('gitcommit', {
+"    sources = cmp.config.sources({
+"      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+"    }, {
+"      { name = 'buffer' },
+"    })
+"  })
+
+
 " Setup Completion
 " See https://github.com/hrsh7th/nvim-cmp#basic-configuration
 lua <<EOF
 local cmp = require'cmp'
-cmp.setup({
+-- cmp.setup({
+ cmp.setup.filetype({'rust','go','godoc','gomod', 'c'},{
   -- Enable LSP snippets
   snippet = {
     expand = function(args)
