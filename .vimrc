@@ -18,20 +18,12 @@ call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'kamykn/spelunker.vim' " Spelling
-" Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'neovim/nvim-lspconfig' " Collection of common configurations for the Nvim LSP client
 
-" Collection of common configurations for the Nvim LSP client
-Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp' " Completion framework
 
-" Completion framework
-Plug 'hrsh7th/nvim-cmp'
-
-" LSP completion source for nvim-cmp
-Plug 'hrsh7th/cmp-nvim-lsp'
-
-" Snippet completion source for nvim-cmp
-Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/cmp-nvim-lsp' " LSP completion source for nvim-cmp
+Plug 'hrsh7th/cmp-vsnip' " Snippet completion source for nvim-cmp
 
 " Other usefull completion sources
 Plug 'hrsh7th/cmp-path'
@@ -39,11 +31,9 @@ Plug 'hrsh7th/cmp-buffer'
 
 " See hrsh7th's other plugins for more completion sources!
 
-" To enable more of the features of rust-analyzer, such as inlay hints and more!
-Plug 'simrat39/rust-tools.nvim'
+Plug 'simrat39/rust-tools.nvim' " To enable more of the features of rust-analyzer, such as inlay hints and more!
 
-" Snippet engine
-Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip' " Snippet engine
 
 " Fuzzy finder
 " Optional
@@ -51,8 +41,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" Color scheme used in the GIFs!
-Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim' " Colorscheme
 
 call plug#end()
 
