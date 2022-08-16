@@ -89,3 +89,4 @@ export PATH=$GOBIN:$PATH
 # Setup Rust Environment
 # ----------------------
 . "$HOME/.cargo/env"
+export PATH=/home/haydon/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin:$PATH
