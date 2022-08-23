@@ -65,7 +65,19 @@ Great reference: https://www.reddit.com/r/thinkpad/comments/oelz0t/my_experience
 pacman -S sof-firmware intel-ucode intel-media-driver acpi
 ```
 
+## AMD / RTX Desktop specific Packages
+```
+pacman -S nvidia amd-ucode amd-ucode
+```
+
+
 ### Postinstall
+systemctl enable gdm.service
+systemctl enable NetworkManager.service
+
+
+
+
 In tweaks - additional layout options - ctrl position.
 https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/
 
