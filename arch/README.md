@@ -33,7 +33,7 @@
 ## Packages
 ```
 # Bootstrap arch.
-pacstrap /mnt base linux linux-firmware linux-headers nvim grub efibootmgr dosfstools sudo git filesystem base-devel clang networkmanager
+pacstrap /mnt base linux linux-firmware linux-headers neovim grub efibootmgr dosfstools sudo git filesystem base-devel clang networkmanager
 
 # Install base packages pacman -S 
 pacman -S gdm gnome
