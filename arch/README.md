@@ -40,11 +40,20 @@ pacman -S gdm gnome
 
 # Post GUI packages
 pacman -S firefox smartmontools gtest ipmitool vlc gnome-epub-thumbnailer tmux nmap rust go delve golang-golang-x-tools fzf the_silver_searcher ripgrep openvpn dnsutils
-pacman -S gnome-tweaks arduino arduino-cli bat openconnect cmake kicad jq exfatprogs nfts-3G rsync openssh
+pacman -S gnome-tweaks arduino arduino-cli bat openconnect cmake kicad jq exfatprogs nfts-3g rsync openssh
 
 
 pacman -S python3 python-setuptools
 pacman -S docker
+
+## Networking Cheat Sheet
+ip addr add 192.168.1.1/24 dev en1
+ip link set en1 up
+ip route add default via 1.1.1.1 dev en1
+
+
+add dns to /etc/resolv.conf
+
 
 ```
 ## Lenovo X1 Packages
