@@ -85,6 +85,11 @@ sudo yay -Syu
 yay -S google-chrome slack-desktop zoom
 
 ```
+In gnome-control-center under sounds switch to any alarm sound other than the current one and switch back. This will ensure the directory structure and files needed for the next step are created. Then run:
+```
+touch ~/.local/share/sounds/__custom/screen-capture.disabled
+touch ~/.local/share/sounds/
+```
 
 
 In tweaks - additional layout options - ctrl position.
