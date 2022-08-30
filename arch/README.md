@@ -72,10 +72,19 @@ pacman -S nvidia amd-ucode amd-ucode
 
 
 ### Postinstall
+```
 systemctl enable gdm.service
 systemctl enable NetworkManager.service
 
+cd /opt
+sudo git clone https://aur.archlinux.org/yay-git.git
+sudo chown -R myuser:myuser ./yay-git
+cd yay-git
+makepkg -si
+sudo yay -Syu
+yay -S google-chrome slack-desktop zoom
 
+```
 
 
 In tweaks - additional layout options - ctrl position.
