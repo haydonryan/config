@@ -70,7 +70,7 @@ pacman -S sof-firmware intel-ucode intel-media-driver acpi
 
 ## AMD / RTX Desktop specific Packages
 ```
-pacman -S nvidia amd-ucode amd-ucode
+pacman -S nvidia amd-ucode lm_sensors
 ```
 
 
@@ -85,7 +85,7 @@ sudo chown -R myuser:myuser ./yay-git
 cd yay-git
 makepkg -si
 sudo yay -Syu
-yay -S google-chrome slack-desktop zoom perl-rename mkinitcpio-numlock
+yay -S google-chrome slack-desktop zoom perl-rename mkinitcpio-numlock zenpower3-dkms
 gsettings set org.gnome.desktop.peripherals.keyboard numlock-state
 
 ```
