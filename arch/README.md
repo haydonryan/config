@@ -83,6 +83,7 @@ cd yay-git
 makepkg -si
 sudo yay -Syu
 yay -S google-chrome slack-desktop zoom perl-rename mkinitcpio-numlock
+gsettings set org.gnome.desktop.peripherals.keyboard numlock-state
 
 ```
 In gnome-control-center under sounds switch to any alarm sound other than the current one and switch back. This will ensure the directory structure and files needed for the next step are created. Then run:
