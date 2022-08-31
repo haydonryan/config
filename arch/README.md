@@ -69,8 +69,11 @@ pacman -S sof-firmware intel-ucode intel-media-driver acpi
 ```
 
 ## AMD / RTX Desktop specific Packages
+
+Note need to disable the HDMI audio output from the GPU otherwise it conflicts 
 ```
 pacman -S nvidia amd-ucode lm_sensors
+sudo echo "snd_hda_codec_hdmi" >> /etc/modprobe.d/blacklist.conf
 ```
 
 
