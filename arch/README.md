@@ -40,7 +40,7 @@ pacman -S gdm gnome
 
 # Post GUI packages
 pacman -S firefox smartmontools gtest ipmitool vlc gnome-epub-thumbnailer tmux nmap go delve golang-golang-x-tools fzf the_silver_searcher ripgrep openvpn dnsutils
-pacman -S gnome-tweaks arduino arduino-cli bat openconnect cmake kicad jq exfatprogs nfts-3g rsync openssh
+pacman -S gnome-tweaks arduino arduino-cli bat openconnect cmake kicad jq exfatprogs nfts-3g rsync openssh clementine
 
 
 pacman -S python3 python-setuptools
