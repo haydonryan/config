@@ -95,6 +95,11 @@ touch ~/.local/share/sounds/__custom/screen-capture.disabled
 touch ~/.local/share/sounds/
 ```
 
+Interesting but dangerous:
+```
+echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/dont-prompt-$USER-for-sudo-password"
+```
+
 
 In tweaks - additional layout options - ctrl position.
 https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/
