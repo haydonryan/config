@@ -54,7 +54,8 @@ ip link set en1 up
 ip route add default via 1.1.1.1 dev en1
 
 
-add dns to /etc/resolv.conf
+# add dns to /etc/resolv.conf
+nameserver 8.8.8.8
 
 
 ```
