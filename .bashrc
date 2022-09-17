@@ -85,6 +85,11 @@ export GOPATH=~/workspace/go
 export GOBIN=~/workspace/go/bin
 export PATH=$GOBIN:$PATH
 
+# ----------------------------------------------
+# Add config for bare git repo to store dotfiles
+# ----------------------------------------------
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
 # ----------------------
 # Setup Rust Environment
 # ----------------------
