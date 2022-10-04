@@ -98,6 +98,9 @@ touch ~/.local/share/sounds/__custom/screen-capture.disabled
 touch ~/.local/share/sounds/
 ```
 
+Setup Time to auto adjust based on IP address Geolocation:
+https://wiki.archlinux.org/title/System_time#Setting_based_on_geolocation 
+
 Interesting but dangerous:
 ```
 echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/dont-prompt-$USER-for-sudo-password"
