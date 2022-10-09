@@ -1,5 +1,5 @@
 # Linux Config Files
-# NOTE MOVING TO GIT BARE REPOSITORY
+# NOTE MOVING TO GIT BARE REPOSITORY - This repository is depricated.
 
 
 My common linux configuration files across ubuntu and ish for iOS.  Stores all configuration in ~/.haydons-config.  Clone the repository by using the following commands:
