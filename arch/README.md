@@ -158,4 +158,7 @@ Go into speaker control in gnome, switch to spdif device and drag volume until i
 removed epiphany:
 ```
 pacman -R epiphany
+pacman -R gedit
+pacman -R evolution
+
 ```
