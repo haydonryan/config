@@ -153,6 +153,11 @@ pacman -S broadcom-wl
 ### Turn Off SPDIF
 Go into speaker control in gnome, switch to spdif device and drag volume until it mutes, change back to built in speakers and it will turn off.
 
+## Fix Issue with GDM login displaying on wrong window.
+copy ~/.config/monitors.xml to /var/lib/gdm/.config/monitors.xml
+chown gdm:gdm /var/lib/gdm/.config/monitors.xml
+
+
 
 ## Removal of additional packages.
 removed epiphany:
