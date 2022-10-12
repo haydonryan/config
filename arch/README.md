@@ -166,5 +166,6 @@ pacman -R epiphany
 pacman -R gedit
 pacman -R evolution
 pacman -R totem
+pacman -R teams
 
 ```
