@@ -159,6 +159,11 @@ chown gdm:gdm /var/lib/gdm/.config/monitors.xml
 
 
 
+# GSettings
+```
+gsettings set org.gnome.nautilus.preferences open-folder-on-dnd-hover false
+```
+
 ## Removal of additional packages.
 removed epiphany:
 ```
