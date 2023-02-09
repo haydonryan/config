@@ -44,6 +44,8 @@ pacman -S firefox smartmontools gtest ipmitool vlc gnome-epub-thumbnailer tmux n
 fzf the_silver_searcher ripgrep openvpn dnsutils gnome-tweaks arduino arduino-cli bat openconnect cmake kicad jq \
 exfatprogs nfts-3g rsync openssh clementine libreoffice-still gimp man-db
 
+# Install pipewire alsa support - to fix issue of pluging into hub and audio stopped.
+pacman -S pipewire-alsa 
 
 pacman -S python3 python-setuptools
 pacman -S docker
