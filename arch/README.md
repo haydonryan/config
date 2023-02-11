@@ -90,7 +90,7 @@ sudo chown -R myuser:myuser ./yay-git
 cd yay-git
 makepkg -si
 sudo yay -Syu
-yay -S google-chrome slack-desktop zoom perl-rename mkinitcpio-numlock zenpower3-dkms
+yay -S google-chrome slack-desktop zoom perl-rename zenpower3-dkms
 gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true
 
 ```
@@ -155,7 +155,7 @@ pacman -S broadcom-wl
 ### Turn Off SPDIF
 Go into speaker control in gnome, switch to spdif device and drag volume until it mutes, change back to built in speakers and it will turn off.
 
-## Fix Issue with GDM login displaying on wrong window.
+## Fix Issue with GDM login displaying on wrong monitor.
 copy ~/.config/monitors.xml to /var/lib/gdm/.config/monitors.xml
 chown gdm:gdm /var/lib/gdm/.config/monitors.xml
 
