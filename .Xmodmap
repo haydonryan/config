@@ -1,8 +1,0 @@
-! make Caps_Lock key work as  Control_R
-!
-remove Lock = Caps_Lock
-! remove Control = Control_R
-!keysym Control_L= Caps_Lock
-keysym Caps_Lock = Control_L
-!add Lock = Caps_Lock
-! add Control = Control_R
