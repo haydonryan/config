@@ -91,7 +91,7 @@ cd yay-git
 makepkg -si
 sudo yay -Syu
 yay -S google-chrome slack-desktop zoom perl-rename mkinitcpio-numlock zenpower3-dkms
-gsettings set org.gnome.desktop.peripherals.keyboard numlock-state
+gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true
 
 ```
 In gnome-control-center under sounds switch to any alarm sound other than the current one and switch back. This will ensure the directory structure and files needed for the next step are created. Then run:
@@ -164,6 +164,8 @@ chown gdm:gdm /var/lib/gdm/.config/monitors.xml
 # GSettings
 ```
 gsettings set org.gnome.nautilus.preferences open-folder-on-dnd-hover false
+gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true
+
 ```
 
 ## Removal of additional packages.
